@@ -81,18 +81,20 @@
                     <br>
                     integrated testing features allow for a streamlined .
                 </p>
-                <button class="btn btn-active btn-accent text-black font-bold brand_color mb-[20px]">
+                <button onclick="buyTickets()"
+                    class="btn btn-active btn-accent text-black font-bold brand_color mb-[20px]">
                     Buy Tickets
                 </button>
             </div>
 
         </section>
 
-        <section>
+        <section class="best_offer">
             <!-- stats section -->
-            <div class="flex flex-wrap md:flex-row w-[80%] mx-auto mt-5 md:mt-[-70px] mb-32 gap-4">
+            <div class="flex flex-col md:flex-row w-[80%] mx-auto mt-5 md:mt-[-70px] mb-32 gap-4">
                 <!-- card 1 -->
-                <div class="card w-[308px] h-[138px] mx-auto bg-white border-b-[#1cd100] border-b-[3px] rounded-3xl font_inter">
+                <div
+                    class="card w-[308px] h-[138px] mx-auto bg-white border-b-[#1cd100] border-b-[3px] rounded-3xl font_inter">
                     <div class="card-body flex flex-row items-center">
                         <div>
                             <img src="images/people.png" alt="" class="w-16">
@@ -109,7 +111,8 @@
                 </div>
 
                 <!-- card 2 -->
-                <div class="card w-[308px] md:h-[138px] mx-auto bg-white border-b-[#1cd100] border-b-[3px] rounded-3xl font_inter">
+                <div
+                    class="card w-[308px] md:h-[138px] mx-auto bg-white border-b-[#1cd100] border-b-[3px] rounded-3xl font_inter">
                     <div class="card-body flex flex-row items-center">
                         <div>
                             <img src="images/ticket-cupon.png" alt="" class="w-16">
@@ -126,7 +129,8 @@
                 </div>
 
                 <!-- card 3 -->
-                <div class="card w-[308px] md:h-[138px] mx-auto bg-white border-b-[#1cd100] border-b-[3px] rounded-3xl font_inter">
+                <div
+                    class="card w-[308px] md:h-[138px] mx-auto bg-white border-b-[#1cd100] border-b-[3px] rounded-3xl font_inter">
                     <div class="card-body flex flex-row items-center">
                         <div>
                             <img src="images/stoppage.png" alt="" class="w-16">
@@ -142,6 +146,76 @@
                     </div>
                 </div>
 
+            </div>
+
+            <!-- best offer section -->
+            <div class="w-[80%] h-2 mx-auto">
+                <h2 class="font_raleway text-center text-4xl md:text-[40px] font-bold text-black mb-12">
+                    Best offers for you
+                </h2>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-6">
+                    <!-- div yellow -->
+                    <div
+                        class="w-[400px] md:w-[500px] h-[150px] md:h-[220px] div_yellow flex flex-row items-center justify-center py-10 md:py-12 mb-16">
+                        <div class="font_inter text-[#030712CC]">
+                            <span class="font-extrabold text-[30px] md:text-[40px]">
+                                15% OFF
+                            </span>
+                            <br>
+                            <span class="font-semibold text-lg md:text-xl">
+                                on your next purchase
+                            </span>
+                            <br>
+                            <span>
+                                use by January 2024
+                            </span>
+                        </div>
+                        <img src="images/cupon-devider.png" alt="" class="w-10 md:w-12 h-[150px] md:h-[220px]">
+                        <div class="py-12 font_raleway">
+                            <span class="font-bold text-2xl md:text-[32px]">
+                                NEW15
+                            </span>
+                            <br>
+                            <span class="font-medium md:text-xl">
+                                Coupon Code
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- div pink -->
+                    <div
+                        class="w-[400px] md:w-[500px] h-[150px] md:h-[220px] div_pink flex flex-row items-center justify-center py-10 md:py-12 mb-16">
+                        <div class="font_inter text-[#030712CC]">
+                            <span class="font-extrabold text-[30px] md:text-[40px]">
+                                20% OFF
+                            </span>
+                            <br>
+                            <span class="font-semibold text-lg md:text-xl">
+                                on your next purchase
+                            </span>
+                            <br>
+                            <span class="">
+                                use by January 2024
+                            </span>
+                        </div>
+                        <img src="images/cupon-devider.png" alt="" class="w-10 md:w-12 h-[150px] md:h-[220px]">
+                        <div class="py-12 font_raleway">
+                            <span class="font-bold text-2xl md:text-[32px]">
+                                Couple 20
+                            </span>
+                            <br>
+                            <span class="font-medium md:text-xl">
+                                Coupon Code
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <center>
+                    <button
+                        class="btn btn-active btn-accent font-bold bg-transparent text-[#1cd100] border-[#1cd100] mb-[120px]">
+                        See All Offers
+                    </button>
+                </center>
             </div>
         </section>
 
