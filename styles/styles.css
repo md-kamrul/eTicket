@@ -12,5 +12,27 @@
 }
 
 .brand_color{
-    background-color: #1dd10066;
+    background-color: #1cd100;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+/* hero section */
+.heroSection{
+    background-image: url('../images/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heroSection .btn{
+    border: transparent;
+}
+
+.heroSection .btn:hover{
+    color: white;
+    background-color: #1cd10071;
+    border: 1px solid #1cd100;
 }
