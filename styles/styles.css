@@ -3,35 +3,36 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-.font_inter{
+.font_inter {
     font-family: "Inter", sans-serif;
 }
 
-.font_raleway{
+.font_raleway {
     font-family: "Raleway", sans-serif;
 }
 
-.brand_color{
+.brand_color {
     background-color: #1cd100;
 }
 
-img{
+img {
     width: 100%;
     height: auto;
 }
 
 /* hero section */
-.heroSection{
-    background-image: url('../images/banner.png');
+.heroSection {
+    background: linear-gradient(180.00deg, rgba(3, 7, 18, 0.5), rgba(3, 7, 18, 0) 100%), url('../images/banner.png');
+    border-radius: 32px;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.heroSection .btn{
+.heroSection .btn {
     border: transparent;
 }
 
-.heroSection .btn:hover{
+.heroSection .btn:hover {
     color: white;
     background-color: #1cd10071;
     border: 1px solid #1cd100;
