@@ -20,7 +20,7 @@ img {
     height: auto;
 }
 
-.text_secondary{
+.text_secondary {
     color: #030712b3
 }
 
@@ -45,16 +45,16 @@ img {
 }
 
 /* best offer section */
-.div_yellow{
+.div_yellow {
     width: 100px;
     background-image: url('../images/Rectangle_yellow.png');
 }
 
-.div_pink{
+.div_pink {
     background-image: url('../images/Rectangle_pink.png');
 }
 
-.best_offer button:hover{
+.best_offer button:hover {
     background-color: #1cd10059;
     border: 1px solid #1cd100;
     color: black;
