@@ -14,7 +14,7 @@ for (let SelectYourSeat of SelectYourSeatClass) {
         }
         
         if (count === 4) { 
-            
+            cuponFunction();
         }
     });
 }
@@ -52,6 +52,11 @@ function counterChange(getTheId, count) {
 function totalPrice(count) {
     let totalPrice = 550 * count;
     document.getElementById('totalPrice').innerText = totalPrice;
+}
+
+// cuponFunction()
+function cuponFunction() { 
+    document.getElementById('apply').removeAttribute('disabled');
 }
 
 // Grand total function
