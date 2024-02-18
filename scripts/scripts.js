@@ -58,6 +58,7 @@ function counterChange(getTheId, count) {
 function totalPrice(count) {
     let Price = 550 * count;
     document.getElementById('totalPrice').innerText = Price;
+    document.getElementById('grandPrice').innerText = Price;
     return Price;
 }
 
