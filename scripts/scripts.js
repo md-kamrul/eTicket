@@ -21,7 +21,9 @@ for (let SelectYourSeat of SelectYourSeatClass) {
         if (count === 4) {
             cuponFunction(Price);
         }
-        nextButtonValid(count);
+        if (count === 1) { 
+            nextButtonValid(count);
+        }
     });
 }
 
