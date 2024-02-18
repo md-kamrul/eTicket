@@ -24,6 +24,20 @@ img {
     color: #030712b3
 }
 
+.set_bg {
+    background-color: #0307121A;
+}
+
+.ticket {
+    width: 110px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 /* hero section */
 .heroSection,
 .div_yellow,
