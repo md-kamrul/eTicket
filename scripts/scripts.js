@@ -1,19 +1,23 @@
 // select the seats function
 let count = 0;
+let seatArray = [];
 let SelectYourSeatClass = document.getElementsByClassName('SelectYourSeat');
 for (let SelectYourSeat of SelectYourSeatClass) {
     SelectYourSeat.addEventListener('click', function (event) {
         if (count < 4) {
-            count = count + 1;
             let getTheId = event.target.innerText;
-            document.getElementById(getTheId).classList.add('bg-[#1cd100]');
+            // console.log(seatArray);
+            if (!seatArray.includes(getTheId)) {
+                count = count + 1;
+                document.getElementById(getTheId).classList.add('bg-[#1cd100]');
 
-            priceListfunction(getTheId);
+                priceListfunction(getTheId);
 
-            counterChange(getTheId, count);
+                counterChange(getTheId, count);
+            }
         }
-        
-        if (count === 4) { 
+
+        if (count === 4) {
             cuponFunction();
         }
     });
@@ -26,6 +30,8 @@ function priceListfunction(getTheId) {
     let getP = document.createElement('p');
     getP.innerText = getTheId;
     divP.appendChild(getP);
+    seatArray.push(getTheId);
+    
     let classP = document.createElement('p');
     classP.innerText = 'AC_Business';
     divP.appendChild(classP);
@@ -55,7 +61,7 @@ function totalPrice(count) {
 }
 
 // cuponFunction()
-function cuponFunction() { 
+function cuponFunction() {
     document.getElementById('apply').removeAttribute('disabled');
 }
 
