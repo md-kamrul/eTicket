@@ -35,6 +35,9 @@ function counterChange(getTheId){
     count = count + 1;
     console.log(count);
     priceList.innerText = count;
+
+    let seatsAvailable = document.getElementById('seatsAvailable');
+    seatsAvailable.innerText = seatsAvailable.innerText - 1;
 }
 
 // next button fuction
