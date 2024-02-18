@@ -519,18 +519,86 @@
                 </div>
 
                 <!-- middle side -->
-                 <div>
+                <div>
                     <img src="images/info-devider.png" alt="" class="h-full">
-                 </div>
+                </div>
 
                 <!-- right side -->
-                <div class="w-full grid grid-cols-2">
+                <div class="w-full">
                     <div class="col-span-2">
                         <h2 class="text-[#030712] text-2xl text-left mb-5">
                             Select Your Seat
                         </h2>
                         <hr style="border: 1px dashed rgba(3, 7, 18, 0.2); margin-bottom: 20px;">
                     </div>
+
+                    <div class="w-full set_bg rounded-xl">
+
+                        <!-- body section -->
+                        <div class="w-full text-[#030712]font_inter font-medium flex flex-row justify-between p-8">
+
+                            <!-- heading -->
+                            <p class="font-semibold">
+                                Seat
+                                <span class="bg-[#1DD100] rounded-[5px] text-white p-1">
+                                    0
+                                </span>
+                            </p>
+                            <p class="font-semibold">
+                                Class
+                            </p>
+                            <p class="font-semibold">
+                                Price
+                            </p>
+
+                        </div>
+
+                        <div id="priceList"
+                            class="w-full text-[#030712]font_inter font-medium flex flex-row justify-between p-8">
+
+                        </div>
+
+                        <!-- total section -->
+                        <div id="totalPrice"
+                            class="w-full text-[#030712]font_inter font-medium flex flex-row justify-between p-8">
+                            <p class="font-semibold">
+                                Total Price
+                            </p>
+                            <p class="font-semibold">
+                                BDT
+                                <span>
+                                    0
+                                </span>
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- input cupon section -->
+                    <div class="mt-5 flex flex-row gap-1">
+                        <label class="w-5/6 input input-bordered flex flex-row items-center gap-2">
+                            <input type="text" class="grow w-2/3" placeholder="Have any copupon?" />
+                        </label>
+                        <button class="btn btn-active btn-accent text-black font-bold brand_color mb-[20px]">
+                            <a href="#">
+                                Apply
+                            </a>
+                        </button>
+                    </div>
+
+                    <!-- total section -->
+                    <div id="totalPrice"
+                    class="w-full text-[#030712]font_inter font-medium flex flex-row justify-between p-8">
+                    <p class="font-semibold">
+                        Grand Total
+                    </p>
+                    <p class="font-semibold">
+                        BDT
+                        <span>
+                            0
+                        </span>
+                    </p>
+                </div>
                 </div>
 
             </div>
