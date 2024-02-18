@@ -1,5 +1,6 @@
 // select the seats function
 let count = 0;
+let bugFixer = 0;
 let seatArray = [];
 let SelectYourSeatClass = document.getElementsByClassName('SelectYourSeat');
 for (let SelectYourSeat of SelectYourSeatClass) {
@@ -21,7 +22,7 @@ for (let SelectYourSeat of SelectYourSeatClass) {
         if (count === 4) {
             cuponFunction(Price);
         }
-        if (count === 1) { 
+        if (count === 1) {
             nextButtonValid(count);
         }
     });
@@ -72,7 +73,6 @@ function cuponFunction(Price) {
     document.getElementById('apply').removeAttribute('disabled');
     apply.addEventListener('click', function () {
         grandTotal(parseInt(Price));
-        console.log(typeof Price);
     });
 }
 
@@ -85,6 +85,7 @@ function grandTotal(Price) {
     let inputSection = document.getElementById('inputSection');
     if (cupon === "NEW15") {
         inputSection.classList.add('hidden');
+        // if(coun)
         grandTotalCal(Price, 15);
     }
     else if (cupon === "Couple 20") {
@@ -98,21 +99,22 @@ function grandTotal(Price) {
 }
 
 function grandTotalCal(Price, parcent) {
-    let grandTotal = 0;
+    if (bugFixer === 0) {
+        let grandTotal = 0;
+        let discountAmount = document.getElementById('discountAmount');
+        let text = document.createElement('p');
+        text.innerText = "Discount";
+        discountAmount.appendChild(text);
+        let discount = document.createElement('p');
+        let myDiscount = Price * (parcent / 100);
+        discount.innerText = "BDT" + myDiscount;
+        discountAmount.appendChild(discount);
 
-    let discountAmount = document.getElementById('discountAmount');
-    let text = document.createElement('p');
-    text.innerText = "Discount";
-    discountAmount.appendChild(text);
-    let discount = document.createElement('p');
-    let myDiscount = Price * (parcent / 100);
-    discount.innerText = "BDT" + myDiscount;
-    discountAmount.appendChild(discount);
+        grandTotal = Price - (Price * (parcent / 100));
 
-    console.log(Price);
-    grandTotal = Price - (Price * (parcent / 100));
-
-    document.getElementById('grandPrice').innerText = grandTotal;
+        document.getElementById('grandPrice').innerText = grandTotal;
+        bugFixer = bugFixer + 1;
+    }
 }
 
 // next button fuction
