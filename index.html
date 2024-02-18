@@ -532,7 +532,7 @@
                         <hr style="border: 1px dashed rgba(3, 7, 18, 0.2); margin-bottom: 20px;">
                     </div>
 
-                    <div class="w-full set_bg rounded-xl">
+                    <div class="w-full set_bg rounded-xl mb-5">
 
                         <!-- body section -->
                         <div class="w-full text-[#030712]font_inter font-medium flex flex-row justify-between p-8">
@@ -572,33 +572,62 @@
                             </p>
                         </div>
 
+                        <!-- input cupon section -->
+                        <div class="mt-5 flex flex-row gap-1 px-5">
+                            <label class="w-5/6 input input-bordered flex flex-row items-center gap-2">
+                                <input type="text" class="grow w-2/3" placeholder="Have any copupon?" />
+                            </label>
+                            <button class="btn btn-active btn-accent text-black font-bold brand_color mb-[20px]">
+                                <a href="#">
+                                    Apply
+                                </a>
+                            </button>
+                        </div>
+
+                        <!-- total section -->
+                        <div id="totalPrice"
+                            class="w-full text-[#030712]font_inter font-medium flex flex-row justify-between p-8">
+                            <p class="font-semibold">
+                                Grand Total
+                            </p>
+                            <p class="font-semibold">
+                                BDT
+                                <span>
+                                    0
+                                </span>
+                            </p>
+                        </div>
+
                     </div>
 
-                    <!-- input cupon section -->
-                    <div class="mt-5 flex flex-row gap-1">
-                        <label class="w-5/6 input input-bordered flex flex-row items-center gap-2">
-                            <input type="text" class="grow w-2/3" placeholder="Have any copupon?" />
-                        </label>
-                        <button class="btn btn-active btn-accent text-black font-bold brand_color mb-[20px]">
-                            <a href="#">
-                                Apply
-                            </a>
-                        </button>
+                    <!-- contact input box -->
+                    <div class="px-5 flex flex-col gap-5 mx-auto">
+                        <div>
+                            <p class="text-left font-bold">
+                                Passenger Name*
+                            </p>
+                            <label class="w-full input input-bordered flex flex-row items-center gap-2">
+                                <input type="text" class="grow w-full" placeholder="Enter your name" required/>
+                            </label>
+                        </div>
+                        <div>
+                            <p class="text-left font-bold">
+                                Phone Number*
+                            </p>
+                            <label class="w-full input input-bordered flex flex-row items-center gap-2">
+                                <input type="number" class="grow w-full" placeholder="Enter your phone number" required/>
+                            </label>
+                        </div>
+                        <div>
+                            <p class="text-left font-bold">
+                                Email Id*
+                            </p>
+                            <label class="w-full input input-bordered flex flex-row items-center gap-2">
+                                <input type="email" class="grow w-full" placeholder="Enter your email address" required/>
+                            </label>
+                        </div>
                     </div>
 
-                    <!-- total section -->
-                    <div id="totalPrice"
-                    class="w-full text-[#030712]font_inter font-medium flex flex-row justify-between p-8">
-                    <p class="font-semibold">
-                        Grand Total
-                    </p>
-                    <p class="font-semibold">
-                        BDT
-                        <span>
-                            0
-                        </span>
-                    </p>
-                </div>
                 </div>
 
             </div>
