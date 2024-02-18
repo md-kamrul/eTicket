@@ -82,14 +82,21 @@ function grandTotal(Price) {
         inputSection.classList.add('hidden');
         grandTotalCal(Price, 15);
     }
+    else if (cupon === "Couple 20") {
+        inputSection.classList.add('hidden');
+        grandTotalCal(Price, 20);
+    }
+    else { 
+        alert("Enter a valid cupon code....");
+        document.getElementById('cuponInput').value = '';
+    }
 }
 
 function grandTotalCal(Price, parcent) {
     let grandTotal = 0;
-    console.log(parseFloat(Price), parcent);
     grandTotal = Price - (Price * (parcent / 100));
 
-    console.log(document.getElementById('grandPrice').innerText);
+    document.getElementById('grandPrice').innerText = grandTotal;
 }
 
 // next button fuction
