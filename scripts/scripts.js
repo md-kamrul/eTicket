@@ -38,6 +38,14 @@ function counterChange(getTheId){
 
     let seatsAvailable = document.getElementById('seatsAvailable');
     seatsAvailable.innerText = seatsAvailable.innerText - 1;
+
+    totalPrice(count);
+}
+
+// total price function
+function totalPrice(count) { 
+    let totalPrice = 550 * count;
+    document.getElementById('totalPrice').innerText = totalPrice;
 }
 
 // next button fuction
