@@ -21,6 +21,7 @@ for (let SelectYourSeat of SelectYourSeatClass) {
         if (count === 4) {
             cuponFunction(Price);
         }
+        nextButtonValid(count);
     });
 }
 
@@ -87,7 +88,7 @@ function grandTotal(Price) {
         inputSection.classList.add('hidden');
         grandTotalCal(Price, 20);
     }
-    else { 
+    else {
         alert("Enter a valid cupon code....");
         document.getElementById('cuponInput').value = '';
     }
@@ -101,12 +102,25 @@ function grandTotalCal(Price, parcent) {
 }
 
 // next button fuction
-document.getElementById('next').addEventListener('click', function () {
-    let bodyFunction = document.getElementById('bodyFunction');
-    let successPopUp = document.getElementById('successPopUp')
-    bodyFunction.classList.add("hidden");
-    successPopUp.classList.remove("hidden");
-});
+let nextButton = document.getElementById('next');
+function nextButtonValid(count) {
+    nextButton.addEventListener('click', function () {
+        let phoneNumber = document.getElementById
+            ('phoneNumber').value;
+
+        if (count >= 1 && phoneNumber.length === 11) {
+            document.getElementById
+                ('phoneNumber').value = '';
+            let bodyFunction = document.getElementById('bodyFunction');
+            let successPopUp = document.getElementById('successPopUp')
+            bodyFunction.classList.add("hidden");
+            successPopUp.classList.remove("hidden");
+        }
+        else {
+            alert("You have to select at least 1 ticket & also enter your 11 digits phone number to go next....");
+        }
+    });
+}
 
 // continue button function
 document.getElementById('continue').addEventListener('click', function () {
