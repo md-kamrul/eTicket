@@ -51,7 +51,6 @@ function counterChange(getTheId, count) {
     seatsAvailable.innerText = seatsAvailable.innerText - 1;
 
     totalPrice(count);
-    grandTotal(count);
 }
 
 // total price function
@@ -63,6 +62,7 @@ function totalPrice(count) {
 // cuponFunction()
 function cuponFunction() {
     document.getElementById('apply').removeAttribute('disabled');
+    grandTotal(count);
 }
 
 // Grand total function
