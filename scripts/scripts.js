@@ -4,21 +4,22 @@ let seatArray = [];
 let SelectYourSeatClass = document.getElementsByClassName('SelectYourSeat');
 for (let SelectYourSeat of SelectYourSeatClass) {
     SelectYourSeat.addEventListener('click', function (event) {
+        let Price;
         if (count < 4) {
             let getTheId = event.target.innerText;
-            // console.log(seatArray);
+
             if (!seatArray.includes(getTheId)) {
                 count = count + 1;
                 document.getElementById(getTheId).classList.add('bg-[#1cd100]');
 
                 priceListfunction(getTheId);
 
-                counterChange(getTheId, count);
+                Price = counterChange(getTheId, count);
             }
         }
 
         if (count === 4) {
-            cuponFunction();
+            cuponFunction(Price);
         }
     });
 }
@@ -31,7 +32,7 @@ function priceListfunction(getTheId) {
     getP.innerText = getTheId;
     divP.appendChild(getP);
     seatArray.push(getTheId);
-    
+
     let classP = document.createElement('p');
     classP.innerText = 'AC_Business';
     divP.appendChild(classP);
@@ -50,27 +51,45 @@ function counterChange(getTheId, count) {
     let seatsAvailable = document.getElementById('seatsAvailable');
     seatsAvailable.innerText = seatsAvailable.innerText - 1;
 
-    totalPrice(count);
+    return totalPrice(count);
 }
 
 // total price function
 function totalPrice(count) {
-    let totalPrice = 550 * count;
-    document.getElementById('totalPrice').innerText = totalPrice;
+    let Price = 550 * count;
+    document.getElementById('totalPrice').innerText = Price;
+    return Price;
 }
+
+let apply = document.getElementById('apply')
 
 // cuponFunction()
-function cuponFunction() {
+function cuponFunction(Price) {
     document.getElementById('apply').removeAttribute('disabled');
-    grandTotal(count);
+    apply.addEventListener('click', function () {
+        grandTotal(Price);
+    });
 }
 
+
+
 // Grand total function
-function grandTotal(count) {
-    if (count < 4) {
-        let totalPrice = 550 * count;
-        document.getElementById('GrandPrice').innerText = totalPrice;
+function grandTotal(Price) {
+    let cupon = document.getElementById('cuponInput').value;
+
+    let inputSection = document.getElementById('inputSection');
+    if (cupon === "NEW15") {
+        inputSection.classList.add('hidden');
+        grandTotalCal(Price, 15);
     }
+}
+
+function grandTotalCal(Price, parcent) {
+    let grandTotal = 0;
+    console.log(parseFloat(Price), parcent);
+    grandTotal = Price - (Price * (parcent / 100));
+
+    console.log(document.getElementById('grandPrice').innerText);
 }
 
 // next button fuction
