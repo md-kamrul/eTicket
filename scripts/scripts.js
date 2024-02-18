@@ -1,14 +1,21 @@
 // select the seats function
+let count = 0;
 let SelectYourSeatClass = document.getElementsByClassName('SelectYourSeat');
 for (let SelectYourSeat of SelectYourSeatClass) {
     SelectYourSeat.addEventListener('click', function (event) {
-        let getTheId = event.target.innerText;
-        document.getElementById(getTheId).classList.add('bg-[#1cd100]');
+        if (count < 4) {
+            count = count + 1;
+            let getTheId = event.target.innerText;
+            document.getElementById(getTheId).classList.add('bg-[#1cd100]');
 
-        priceListfunction(getTheId);
+            priceListfunction(getTheId);
 
-        counterChange(getTheId);
-
+            counterChange(getTheId, count);
+        }
+        
+        if (count === 4) { 
+            
+        }
     });
 }
 
@@ -28,24 +35,31 @@ function priceListfunction(getTheId) {
     priceList.appendChild(divP);
 }
 
-let count = 0;
 
-function counterChange(getTheId){ 
+function counterChange(getTheId, count) {
     let priceList = document.getElementById('selectedSeat');
-    count = count + 1;
-    console.log(count);
+
     priceList.innerText = count;
 
     let seatsAvailable = document.getElementById('seatsAvailable');
     seatsAvailable.innerText = seatsAvailable.innerText - 1;
 
     totalPrice(count);
+    grandTotal(count);
 }
 
 // total price function
-function totalPrice(count) { 
+function totalPrice(count) {
     let totalPrice = 550 * count;
     document.getElementById('totalPrice').innerText = totalPrice;
+}
+
+// Grand total function
+function grandTotal(count) {
+    if (count < 4) {
+        let totalPrice = 550 * count;
+        document.getElementById('GrandPrice').innerText = totalPrice;
+    }
 }
 
 // next button fuction
