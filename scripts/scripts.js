@@ -71,7 +71,8 @@ let apply = document.getElementById('apply')
 function cuponFunction(Price) {
     document.getElementById('apply').removeAttribute('disabled');
     apply.addEventListener('click', function () {
-        grandTotal(Price);
+        grandTotal(parseInt(Price));
+        console.log(typeof Price);
     });
 }
 
@@ -98,6 +99,17 @@ function grandTotal(Price) {
 
 function grandTotalCal(Price, parcent) {
     let grandTotal = 0;
+
+    let discountAmount = document.getElementById('discountAmount');
+    let text = document.createElement('p');
+    text.innerText = "Discount";
+    discountAmount.appendChild(text);
+    let discount = document.createElement('p');
+    let myDiscount = Price * (parcent / 100);
+    discount.innerText = "BDT" + myDiscount;
+    discountAmount.appendChild(discount);
+
+    console.log(Price);
     grandTotal = Price - (Price * (parcent / 100));
 
     document.getElementById('grandPrice').innerText = grandTotal;
